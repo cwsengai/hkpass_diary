@@ -27,8 +27,14 @@ const HINTS = {
   "5417": { title: "殘片 // GROUP 3 - #4", elderLine: "", body: "29-19-46", image: "" },
   "8291": { title: "殘片 // GROUP 3 - #5", elderLine: "", body: "↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑", image: "" },
 
+  // ==== Group 4 (bad) ====
+  "7620": { title: "殘片 // GROUP 4 - #2", elderLine: "", body: "「末日前，人們來到這裡，不是為了交談或享樂，而是為了閱讀那些早已離去之人留下的思想。」", image: "" },
+
+  // ==== Group 5 (bad) ====
+  "9502": { title: "殘片 // GROUP 5 - #2", elderLine: "", body: "「在鋼筋與混凝土之間，舊世界留下的知識仍然沉睡。」", image: "" },
+
   // ==== Group 6 (bad) ====
-  "2716": { title: "殘片 // GROUP 6 - #2", elderLine: "", body: "沿著*屠龍戰士*所開闢的道路前行，尋找刻著*130*印記的巨石堡壘。", image: "" },
+  "2716": { title: "殘片 // GROUP 6 - #2", elderLine: "", body: "「沿著*屠龍戰士*所開闢的道路前行，尋找刻著*130*印記的巨石堡壘。」", image: "" },
 
   // ===== Shared letter-confirmation code (same code for all 6 groups) =====
   "1209": {

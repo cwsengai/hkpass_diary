@@ -360,11 +360,11 @@ html, body {
 }
 
 /* ============ per-character handwriting ============ */
-.font-tan   { font-family: 'Long Cang', cursive; color: #2e3b52; }
-.font-sam   { font-family: 'Long Cang', cursive; color: #6b3d2e; }
-.font-alvin { font-family: 'Long Cang', cursive; color: #4a1414; }
-.font-mgr   { font-family: 'Long Cang', cursive; color: #382a4a; }
-.font-k     { font-family: 'Long Cang', serif; color: #1f4a3d; }
+.font-tan   { font-family: 'cwTeX Kai', cursive; color: #2e3b52; }
+.font-sam   { font-family: 'cwTeX Kai', cursive; color: #6b3d2e; }
+.font-alvin { font-family: 'cwTeX Kai', cursive; color: #4a1414; }
+.font-mgr   { font-family: 'cwTeX Kai', cursive; color: #382a4a; }
+.font-k     { font-family: 'cwTeX Kai', serif; color: #153129; }
 .font-unknown {
   font-family: 'Share Tech Mono', monospace;
   color: #333333;
@@ -391,7 +391,7 @@ html, body {
   98% { filter: contrast(0.9) brightness(0.95) hue-rotate(4deg); }
 }
 .corrupt-2 .page-body {
-  text-shadow: 0.6px 0 rgba(226,60,60,0.35), -0.6px 0 rgba(60,180,226,0.25);
+  text-shadow: 0.45px 0 rgba(226,60,60,0.35), -0.45px 0 rgba(49, 149, 189, 0.25);
   animation: jitter-slow 4s ease-in-out infinite;
 }
 
@@ -411,11 +411,11 @@ html, body {
   background: radial-gradient(ellipse at 50% 50%, transparent 55%, rgba(180,20,20,0.12) 100%);
 }
 .corrupt-3 .page-body {
-  text-shadow: 1px 0 rgba(226,60,60,0.55), -1px 0 rgba(60,180,226,0.4);
+  text-shadow: 0.8px 0 rgba(226,60,60,0.35), -0.8px 0 rgba(60,180,226,0.25);
 }
 .corrupt-3 .glitch-char {
   color: var(--error);
-  text-shadow: 0 0 4px rgba(226,60,60,0.8);
+  text-shadow: 0 0 2px rgba(226,60,60,0.8);
 }
 
 @media (max-width: 640px) {

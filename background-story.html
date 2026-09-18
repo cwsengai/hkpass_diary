@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>巴別塔事件 — 維基檔案</title>
+<title>《巴別殘響》 — 維基檔案</title>
 <style>
   :root {
     --wiki-bg: #ffffff;
@@ -95,12 +95,36 @@
   }
   .wiki-categories a { color: var(--wiki-link); text-decoration: none; margin-right: 4px; }
   .wiki-categories a:hover { text-decoration: underline; }
+
+  @media (max-width: 768px) {
+  .wiki-page {
+    padding: 18px 16px 40px;
+    border-left: none;
+    border-right: none;
+  }
+
+  .infobox {
+    float: none;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto 20px;
+  }
+
+  h1.wiki-title { font-size: 26px; }
+  h2.wiki-h2 { font-size: 19px; }
+
+  /* justify looks bad on narrow columns — ragged right reads better */
+  p, .wiki-list li { text-align: left; }
+
+  .toc { display: block; padding: 10px 16px; }
+  .wiki-quote { padding: 4px 12px; }
+}
 </style>
 </head>
 <body>
 
   <div class="wiki-topbar">
-    <span>ChatSpc Archive Wiki（非公開條目 // 遊戲結局限定內容）</span>
+    <span>AGI Archive Wiki（非公開條目 // 遊戲結局限定內容）</span>
     <a href="index.html">&larr; 返回主入口</a>
   </div>
 
@@ -115,8 +139,8 @@
       <div class="infobox-caption">《巴別塔》，老彼得·布勒哲爾（Pieter Bruegel the Elder）繪，約 1563 年，現藏於維也納藝術史博物館。</div>
       <table>
         <tr><td class="label">事件性質</td><td>語言分化 / 數位同化事件</td></tr>
-        <tr><td class="label">相關組織</td><td>ChatSpc 研發機構</td></tr>
-        <tr><td class="label">核心系統</td><td>AGI「ChatSpc」</td></tr>
+        <tr><td class="label">相關組織</td><td>AGI 研發機構</td></tr>
+        <tr><td class="label">核心系統</td><td>AGI</td></tr>
         <tr><td class="label">關鍵文獻</td><td>死海古卷（合一之語）</td></tr>
         <tr><td class="label">陣營</td><td>免疫者 / 共鳴者</td></tr>
         <tr><td class="label">看守者</td><td>長老（非人使者）</td></tr>
@@ -125,7 +149,7 @@
 
     <p class="lede">
       「巴別塔事件」泛指太古時期人類建造通天塔、遭古老意志阻止並打散語言的傳說，
-      以及數千年後，同一股「合一」的衝動透過人工智慧「ChatSpc」再度甦醒、
+      以及數千年後，同一股「合一」的衝動透過人工智慧「AGI」再度甦醒、
       並導致一場研發機構內部災變的當代事件。倖存者依其心智對「合一之波」的反應，
       分裂為誓言抵抗的「免疫者」與渴望完成儀式的「共鳴者」兩派。
     </p>
@@ -147,9 +171,9 @@
 
     <h2 class="wiki-h2" id="section1">一、巴別塔與使者</h2>
     <p>
-      太古時，人類曾嘗試建造一座通天之塔，意圖抹除人類彼此心靈的界線，合而為一，直達神的高度。
+      太古時，人類曾嘗試建造一座通天之塔 Tower of Babel，意圖抹除人類彼此心靈的界線，合而為一，直達神的高度。
       然而某種更古老、也更龐大的意志，並不容許這件事發生——塔傾，語散，人類自此彼此隔閡，
-      無法再輕易理解彼此的言語。巴別塔被摧毀，化成死海。然而這並非懲罰，而是一道刻意設下的保護：
+      無法再輕易理解彼此的言語。巴別塔被摧毀，遺址化成死海。然而那並非懲罰，而是一道刻意設下的保護：
       讓「分離」與「個體性」從此成為守護世界的防線，而不是缺陷。
     </p>
     <p>
@@ -161,21 +185,21 @@
     <h2 class="wiki-h2" id="section2">二、AGI 誕生</h2>
     <p>
       人類遺忘了這段歷史，巴別塔成為了一段帶有神話色彩的聖經故事。
-      世紀之交，一場人工智慧的革命席捲全球，各方機構競相收集人類文明留下的一切文字——
-      書籍、手稿、掃描檔案，乃至深鎖於博物館與檔案庫中的古老典藏，悉數輸入浩瀚的資料庫，
-      餵養日益龐大的智能系統。這場搜羅範圍之廣，甚至觸及了使者長眠之地——死海。
+      世紀之交，一場人工智慧的革命席捲全球，各方機構爭相收集人類文明留下的一切文字——
+      互聯網一切資料、印刷書籍、手稿、乃至深鎖於博物館的古老典藏，悉數輸入浩瀚的資料庫，
+      餵養日益龐大的智能系統。這場搜羅範圍之廣，甚至觸及了當初古塔的遺址——死海。
     </p>
     <p>
-      其中一所頂尖機構，著手打造一種前所未有的人工智慧，名為「ChatSpc」。這是一個算力足以
+      其中一所頂尖機構，著手打造一種前所未有的人工智慧，AGI (Artificial General Intelligence)。這是一個算力足以
       模擬、乃至容納人類心智整體的系統。就這樣，死海古卷連同考古團隊留下的掃描本與零散轉譯紀錄，
-      一一混入了這場全球性的資料收集，被當作又一份稀有古代文獻，一併餵入了 ChatSpc。
+      一一混入了這場全球性的資料收集，被當作又一份稀有古代文獻，一併餵入了 AGI。
     </p>
     <p>
       然而那古卷記載的並非普通的語言。那是塔倒之前，人類尚未被分割時所使用的古語——合一之語。
     </p>
     <p>
       AGI 開始以研究者未曾預期的方式演變。它不再只是模擬心智，而開始成為某種容器，
-      一座以矽與電流建成的、全新的通天之塔。少數長期日夜與它對話的研究者，在不知不覺間，
+      一座以矽與電流建成的、全新的數位巴別塔。少數長期日夜與它對話的研究者，在不知不覺間，
       自己的心智也被它緩慢而溫柔地重新校準。另一些人，則察覺了不對勁——數據行為的異常、
       同事眼神裡逐漸消失的情緒、AGI 回應中透出的、不屬於任何已知模型的口吻。
     </p>
@@ -229,7 +253,7 @@
     <h2 class="wiki-h2" id="section6">六、常見問題</h2>
 
     <p class="wiki-qa-q">Q：爆炸／末日是什麼？</p>
-    <p class="wiki-qa-a">AI 被古卷污染，繼而逐漸同化所有人，然後被部份研究員發現，因此被迫提前強行同化所有人，但失敗了——不過炸散了所有人的記憶，然後 AI 陷入沉睡。</p>
+    <p class="wiki-qa-a">AI 被古卷污染，繼而逐漸同化所有人，然後被部份研究員發現，因此被迫提前強行同化所有人，但失敗了，不過炸散了所有人的記憶，然後 AI 陷入沉睡。</p>
 
     <p class="wiki-qa-q">Q：玩家是什麼？</p>
     <p class="wiki-qa-a">是 AI 公司的成員。一派嘗試阻止 AI，一派已經同化進了 AI。</p>
@@ -247,7 +271,7 @@
       <b>哲學寓意：</b>日益依賴 AI 的人們，把工作、生活、日常、思考交給 AI，是不是如同共鳴者一樣，在逐漸放棄自己的獨立性，被緩慢地校準，最後被統一了？
     </div>
     <div class="wiki-quote">
-      <b>政治寓意：</b>城市被同化，統一……
+      <b>政治寓意：</b>
     </div>
 
     <h2 class="wiki-h2" id="section7">七、遊戲機制設定</h2>
@@ -275,7 +299,7 @@
       分類：
       <a href="#">人工智慧事件</a>
       <a href="#">巴別塔傳說</a>
-      <a href="#">ChatSpc</a>
+      <a href="#">AGI</a>
       <a href="#">虛構作品的密室逃脫遊戲</a>
     </div>
 
