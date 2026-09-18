@@ -3,22 +3,72 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>殘留人格紀錄 // RECOVERED PERSONAL LOGS</title>
+<title>ChatSpc CORE ARCHIVE // 存取入口</title>
 <link rel="stylesheet" href="style.css" />
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Zhi+Mang+Xing&family=Ma+Shan+Zheng&family=Long+Cang&family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <canvas id="network-bg"></canvas>
   <div class="grain"></div>
   <div class="scanlines"></div>
-  <div class="glitch-flash" id="glitch-flash"></div>
-  <div class="side-label" aria-hidden="true">殘留人格紀錄 // RECOVERED LOGS // UNCLASSIFIED</div>
+  <div class="side-label" aria-hidden="true">CHATSPC // CORE ARCHIVE // ACCESS GATEWAY // UNCLASSIFIED</div>
 
-  <!-- ============ PASSWORD OVERLAY (shared) ============ -->
+  <main class="hub">
+
+    <header class="hub-header corner-frame">
+      <span class="corner corner-tl"></span><span class="corner corner-br"></span>
+      <div class="glitch-title" data-text="ChatSpc 核心檔案庫"><span>ChatSpc 核心檔案庫</span></div>
+      <div class="hub-tag">// SELECT AN ACCESS PATHWAY //</div>
+      <div class="hub-tagline">記憶與語言，皆已破碎——選擇你要進入的那一層。</div>
+    </header>
+
+    <div class="path-grid">
+
+      <a class="path-card corner-frame" href="diary-logs/index.html">
+        <span class="corner corner-tl"></span><span class="corner corner-br"></span>
+        <div class="path-tag">PATHWAY_A // CHECKPOINT 1–2</div>
+        <div class="path-title">殘留人格紀錄</div>
+        <div class="path-sub">RECOVERED PERSONAL LOGS</div>
+        <p class="path-desc">四名倖存者的手記殘片。查閱他們在事發前後留下的紀錄，拼湊出真相破裂的方式。</p>
+        <div class="path-cta">進入檔案 →</div>
+      </a>
+
+      <a class="path-card corner-frame" href="archive-hints/index.html">
+        <span class="corner corner-tl"></span><span class="corner corner-br"></span>
+        <div class="path-tag">PATHWAY_B // CHECKPOINT 3+</div>
+        <div class="path-title">長老檔案庫</div>
+        <div class="path-sub">FRAGMENT DECRYPTION TERMINAL</div>
+        <p class="path-desc">輸入你所找到的密文，解密屬於後續關卡的古語殘片與提示。</p>
+        <div class="path-cta">輸入密文 →</div>
+      </a>
+
+    </div>
+
+    <div class="locked-card corner-frame" id="final-truth-card">
+      <span class="corner corner-tl"></span><span class="corner corner-br"></span>
+
+      <div class="lock-overlay" id="lock-overlay">
+        <div class="lock-icon">🔒</div>
+      </div>
+
+      <div class="card-content" id="final-card-content">
+        <div class="path-tag">PATHWAY_C // POST-GAME</div>
+        <div class="path-title">最終真相</div>
+        <div class="path-sub">FINAL TRUTH — UNLOCKED</div>
+        <p class="path-desc">完整背景故事與事件全貌，已在此處揭曉。</p>
+        <a class="path-cta" id="final-card-link" href="background-story.html">進入檔案 →</a>
+      </div>
+    </div>
+
+    <div class="hub-footer">ChatSpc CORE ARCHIVE // ELDER-SYSTEM v1.0</div>
+
+  </main>
+
+  <!-- ============ PASSWORD OVERLAY ============ -->
   <div class="password-overlay hidden" id="password-overlay">
     <div class="password-box">
-      <div class="password-title" id="password-title">請輸入密碼</div>
+      <div class="password-title" id="password-title">請輸入結局密碼</div>
       <input
         type="text"
         id="password-input"
@@ -34,61 +84,6 @@
       <div class="password-error" id="password-error"></div>
     </div>
   </div>
-
-  <!-- ============ CHARACTER SELECT ============ -->
-  <section class="select-screen" id="select-screen">
-
-    <aside class="status-panel corner-frame">
-      <span class="corner corner-tl"></span><span class="corner corner-br"></span>
-      <div class="sp-line">CORE_STATUS: <b>UNSTABLE</b></div>
-      <div class="sp-line">SUBJECTS_UNLOCKED: <b id="sp-subjects">0/4</b></div>
-      <div class="sp-line">SYNC_DRIFT: <b>NOMINAL</b></div>
-      <div class="sp-rule"></div>
-      <div class="sp-line">PASSWORD_ATTEMPTS: <b id="sp-attempts">0</b></div>
-      <div class="sp-line">ENTRIES_RECOVERED: <b id="sp-recovered">0</b></div>
-      <div class="sp-rule"></div>
-      <div class="sp-footer">人格殘留備份 // ELDER-ARCHIVE</div>
-      <div class="sp-logo">ChatSpc</div>
-    </aside>
-
-    <div class="sys-header corner-frame">
-      <span class="corner corner-tl"></span><span class="corner corner-br"></span>
-      <div class="glitch-title" data-text="殘留人格紀錄"><span>殘留人格紀錄</span></div>
-      <div class="sys-tag">// ARCHIVE RECOVERY SYSTEM — RECOVERED PERSONAL LOGS //</div>
-      <div class="sys-tagline">四名倖存者的記憶碎片，正在等待被重新拼湊。</div>
-    </div>
-
-    <div class="cards-console corner-frame">
-      <span class="corner corner-tl"></span><span class="corner corner-br"></span>
-      <div class="barcode" aria-hidden="true"></div>
-      <div class="card-grid" id="card-grid"></div>
-      <div class="sys-footer">SELECT A SUBJECT TO ACCESS THEIR RECOVERED ENTRIES //</div>
-    </div>
-
-  </section>
-
-  <!-- ============ DIARY READER ============ -->
-  <section class="reader-screen hidden" id="reader-screen">
-    <div class="reader-top">
-      <button class="back-btn" id="back-btn">&larr; SUBJECTS</button>
-      <div class="reader-subject" id="reader-subject-label">—</div>
-    </div>
-
-    <div class="tabs-row" id="tabs-row"></div>
-
-    <div class="page-stage">
-      <button class="page-nav page-nav-prev" id="prev-btn" aria-label="previous entry">&#10094;</button>
-
-      <div class="notebook-page" id="notebook-page">
-        <div class="page-stain page-stain-a"></div>
-        <div class="page-stain page-stain-b"></div>
-        <div class="page-date" id="page-date">2026 / 00 / 00</div>
-        <div class="page-body" id="page-body"></div>
-      </div>
-
-      <button class="page-nav page-nav-next" id="next-btn" aria-label="next entry">&#10095;</button>
-    </div>
-  </section>
 
   <script src="app.js"></script>
 </body>

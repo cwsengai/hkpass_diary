@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>殘留人格紀錄 // RECOVERED PERSONAL LOGS</title>
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Zhi+Mang+Xing&family=Ma+Shan+Zheng&family=Long+Cang&family=Liu+Jian+Mao+Cao&family=cwTeXKai&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <canvas id="network-bg"></canvas>
+  <div class="grain"></div>
+  <div class="scanlines"></div>
+  <div class="glitch-flash" id="glitch-flash"></div>
+  <div class="side-label" aria-hidden="true">殘留人格紀錄 // RECOVERED LOGS // UNCLASSIFIED</div>
+
+  <!-- ============ PASSWORD OVERLAY (shared) ============ -->
+  <div class="password-overlay hidden" id="password-overlay">
+    <div class="password-box">
+      <div class="password-title" id="password-title">請輸入密碼</div>
+      <input
+        type="text"
+        id="password-input"
+        class="password-input"
+        placeholder="_ _ _ _"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <div class="password-actions">
+        <button id="password-submit" class="password-submit">確認</button>
+        <button id="password-cancel" class="password-cancel">取消</button>
+      </div>
+      <div class="password-error" id="password-error"></div>
+    </div>
+  </div>
+
+  <!-- ============ CHARACTER SELECT ============ -->
+  <section class="select-screen" id="select-screen">
+
+    <aside class="status-panel corner-frame">
+      <span class="corner corner-tl"></span><span class="corner corner-br"></span>
+      <div class="sp-line">CORE_STATUS: <b>UNSTABLE</b></div>
+      <div class="sp-line">SYNC_DRIFT: <b>NOMINAL</b></div>
+      <div class="sp-rule"></div>
+      <div class="sp-line">PASSWORD_ATTEMPTS: <b id="sp-attempts">0</b></div>
+      <div class="sp-line">HINTS_RECOVERED: <b id="sp-recovered">0/8</b></div>
+      <div class="sp-rule"></div>
+      <div class="sp-footer">人格殘留備份 // ELDER-ARCHIVE</div>
+      <div class="sp-logo">ChatSpc</div>
+    </aside>
+
+    <div class="sys-header corner-frame">
+      <span class="corner corner-tl"></span><span class="corner corner-br"></span>
+      <div class="glitch-title" data-text="殘留人格紀錄"><span>殘留人格紀錄</span></div>
+      <div class="sys-tag">// ARCHIVE RECOVERY SYSTEM — RECOVERED PERSONAL LOGS //</div>
+      <div class="sys-tagline">四名倖存者的記憶碎片，正在等待被重新拼湊。</div>
+    </div>
+
+    <div class="cards-console corner-frame">
+      <span class="corner corner-tl"></span><span class="corner corner-br"></span>
+      <div class="barcode" aria-hidden="true"></div>
+      <div class="card-grid" id="card-grid"></div>
+      <div class="sys-footer">SELECT A SUBJECT TO ACCESS THEIR RECOVERED ENTRIES //</div>
+    </div>
+
+  </section>
+
+  <!-- ============ DIARY READER ============ -->
+  <section class="reader-screen hidden" id="reader-screen">
+    <div class="reader-top">
+      <button class="back-btn" id="back-btn">&larr; SUBJECTS</button>
+      <div class="reader-subject" id="reader-subject-label">—</div>
+    </div>
+
+    <div class="tabs-row" id="tabs-row"></div>
+
+    <div class="page-stage">
+      <button class="page-nav page-nav-prev" id="prev-btn" aria-label="previous entry">&#10094;</button>
+
+      <div class="notebook-page" id="notebook-page">
+        <div class="page-stain page-stain-a"></div>
+        <div class="page-stain page-stain-b"></div>
+        <div class="page-date" id="page-date">2026 / 00 / 00</div>
+        <div class="page-body" id="page-body"></div>
+      </div>
+
+      <button class="page-nav page-nav-next" id="next-btn" aria-label="next entry">&#10095;</button>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

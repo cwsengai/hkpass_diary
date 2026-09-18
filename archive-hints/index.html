@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ChatSpc CORE ARCHIVE // 殘片解密終端</title>
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <canvas id="network-bg"></canvas>
+  <div class="grain"></div>
+  <div class="scanlines"></div>
+  <div class="glitch-flash" id="glitch-flash"></div>
+
+  <div class="side-label" aria-hidden="true">CHATSPC // CORE ARCHIVE // v9.31 // UNCLASSIFIED</div>
+
+  <main class="hud">
+
+    <!-- STATUS PANEL -->
+    <aside class="status-panel corner-frame">
+      <span class="corner corner-tl"></span><span class="corner corner-br"></span>
+      <div class="sp-line">CORE_STATUS: <b>UNSTABLE</b></div>
+      <div class="sp-line">SEAL_INTEGRITY: <b id="sp-integrity">94%</b></div>
+      <div class="sp-line">SYNC_DRIFT: <b>NOMINAL</b></div>
+      <div class="sp-rule"></div>
+      <div class="sp-line">DECRYPT_ATTEMPTS: <b id="sp-attempts">0</b></div>
+      <div class="sp-line">FRAGMENTS_RECOVERED: <b id="sp-recovered">0</b></div>
+      <div class="sp-rule"></div>
+      <div class="sp-footer">古語轉譯協議 // ELDER-ARCHIVE</div>
+      <div class="sp-logo">ChatSpc</div>
+    </aside>
+
+    <!-- HEADER -->
+    <header class="hud-header corner-frame">
+      <span class="corner corner-tl"></span><span class="corner corner-br"></span>
+      <div class="glitch-title" data-text="長老檔案庫">
+        <span>長老檔案庫</span>
+      </div>
+      <div class="hud-subtitle">// ARCHIVE OF THE ELDERS — FRAGMENT DECRYPTION TERMINAL //</div>
+      <div class="hud-tagline">唯有心智完整者，方能窺見塔倒之前的言語。</div>
+    </header>
+
+    <!-- CONSOLE -->
+    <section class="console corner-frame" id="console">
+      <span class="corner corner-tl"></span><span class="corner corner-br"></span>
+      <div class="barcode" aria-hidden="true"></div>
+
+      <label for="code-input" class="console-label">ENTER FRAGMENT CIPHER //</label>
+      <div class="input-row">
+        <input
+          type="text"
+          id="code-input"
+          class="console-input"
+          placeholder="_ _ _ _ _ _"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button id="decrypt-btn" class="decrypt-btn">DECRYPT</button>
+      </div>
+
+      <div class="status-line" id="status-line">STANDING BY //</div>
+    </section>
+
+  </main>
+
+  <!-- HINT REVEAL -->
+  <section class="hint-overlay hidden" id="scroll-overlay">
+    <div class="hint-box">
+      <div class="chevrons" aria-hidden="true">&raquo;&raquo;&raquo;</div>
+      <div class="hint-headline">SYSTEM STATUS: // FRAGMENT DECRYPTED //</div>
+      <h2 class="hint-title" id="scroll-title">FRAGMENT_TITLE</h2>
+      <p class="hint-elder-line" id="scroll-elder-line">"..."</p>
+      <div class="hint-rule"></div>
+      <pre class="hint-body" id="scroll-body-text"></pre>
+      <div class="hint-image-wrap hidden" id="scroll-image-wrap">
+        <img id="scroll-image" src="" alt="hint image" />
+      </div>
+      <button class="close-scroll" id="close-scroll">CLOSE // TERMINATE LINK</button>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
